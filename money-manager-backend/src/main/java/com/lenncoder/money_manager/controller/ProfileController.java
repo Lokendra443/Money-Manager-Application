@@ -46,10 +46,9 @@ public class ProfileController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of(
                     "message", e.getMessage()
-            ))
+            ));
 
         }
     }
-
 
 }
