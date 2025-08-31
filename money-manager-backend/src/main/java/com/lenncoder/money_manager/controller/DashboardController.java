@@ -21,6 +21,4 @@ public class DashboardController {
         Map<String, Object> dashboardData = dashboardService.getDashboardData();
         return ResponseEntity.ok(dashboardData);
     }
-
-
 }

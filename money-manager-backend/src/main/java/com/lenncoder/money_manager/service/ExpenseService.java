@@ -14,4 +14,5 @@ public interface ExpenseService {
     List<ExpenseDTO> getLatest5ExpensesForCurrentUser();
     BigDecimal getTotalExpensesForCurrentUser();
     List<ExpenseDTO> filterExpenses(LocalDate startDate, LocalDate endDate, String keyword, Sort sort);
+    List<ExpenseDTO> getExpensesForUserOnDate(Long profileId, LocalDate date);
 }
