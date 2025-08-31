@@ -41,8 +41,8 @@ public class NotificationServiceImpl implements NotificationService {
         }
     }
 
-    @Scheduled(cron = "0 * * * * *", zone = "IST")
-    //@Scheduled(cron = "0 0 23 * * *", zone = "IST")
+
+    @Scheduled(cron = "0 0 23 * * *", zone = "IST")
     public void sendDailyExpenseSummary() {
         log.info("Job started: sendDailyExpenseSummary()");
         List<ProfileEntity> profiles = profileRepository.findAll();
