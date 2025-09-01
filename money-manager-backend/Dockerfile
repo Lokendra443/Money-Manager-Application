@@ -1,9 +1,8 @@
-# Stage 1: Build the JAR using Maven
-FROM maven:3.9.3-eclipse-temurin-21 AS build
+# Stage 1: Build the JAR
+FROM eclipse-temurin:21-jdk AS build
 WORKDIR /app
-COPY pom.xml .
-COPY src ./src
-RUN mvn clean package -DskipTests
+COPY . .
+RUN mvn clean package
 
 # Stage 2: Run the application
 FROM eclipse-temurin:21-jre
