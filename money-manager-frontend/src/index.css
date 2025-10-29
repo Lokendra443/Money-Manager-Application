@@ -12,3 +12,29 @@ body {
   --color-primary-dark: #1e40af; /* Darker shade */
   --color-primary-light: #60a5fa; /* Lighter shade */
 }
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-md border border-gray-100;
+    @apply transition-all duration-300 ease-in-out;
+     @apply min-h-[200px] p-4;
+  }
+
+  .card:hover {
+    @apply shadow-lg;
+  }
+
+  .card-btn {
+    @apply bg-purple-600 text-white px-3 py-2 rounded-lg;
+    @apply flex items-center justify-center gap-2;
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .card-btn:hover {
+    @apply bg-purple-700 shadow-md;
+  }
+
+  .card-btn:active {
+    @apply scale-95;
+  }
+}

@@ -5,6 +5,7 @@ import { TurkishLira } from 'lucide-react';
 import { axiosConfig } from '../util/axiosConfig';
 import { API_ENDPOINTS } from '../util/apiEndpoints';
 import toast from 'react-hot-toast';
+import IncomeList from '../components/IncomeList';
 
 const Income = () => {
 
@@ -47,13 +48,20 @@ const Income = () => {
 
 
 
-
-
-
   
   return (
     <Dashboard activeMenu="Income">
-      Income
+      <div className='my-5 mx-auto'>
+        <div className='grid grid-cols-1 gap-6'>
+          <div>
+            {/* overview for income with line chart */}
+          </div>
+
+          <IncomeList transactions = {incomeData}/>
+
+        </div>
+
+      </div>
     </Dashboard>
   )
 }
